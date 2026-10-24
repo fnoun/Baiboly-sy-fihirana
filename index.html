@@ -387,7 +387,7 @@ body.dark .fcell .in { background: #1e1e1e; border-color: #2c2c2c; }
 body.dark .fcell .fcn { color: #c0894a; }
 .fih-snum { font-weight:bold; color:#8a5a2a; font-size:14px; }
 body.dark .fih-snum { color:#c0894a; }
-.fih-stitle { font-size:1.25em; font-weight:bold; margin:3px 0 2px 0; }
+.fih-stitle { font-size:1.1em; font-weight:bold; margin:3px 0 2px 0; }
 .fih-fav { display:inline-block; margin-left:10px; color:#ccc; font-size:0.95em; font-weight:normal; vertical-align:middle; padding:2px 6px; }
 .fih-fav.on { color:#e0a92a; }
 body.dark .fih-fav { color:#555; }
@@ -497,9 +497,11 @@ body.th-wine #cpdlg .cpbtn.cpok { background:#8f2d3b; } body.th-purple #cpdlg .c
 #ext .xtabs { margin: 4px 0 8px 0; }
 #ext .xb { display: inline-block; margin: 0 6px 6px 0; padding: 8px 12px; border: 1px solid #cbbd98; border-radius: 8px; background: #fbf9f3; color: #5a3a1a; font-family: Helvetica, Arial, sans-serif; font-size: 14px; cursor: pointer; }
 #ext .xbar, #xbarfix .xbar { margin: 4px 0 6px 0; }
-#ext .xbar input, #ext .xbar select, #xbarfix .xbar input, #xbarfix .xbar select { display: block; width: 100%; margin: 0 0 6px 0; padding: 10px; font-size: 16px; border: 1px solid #cbbd98; border-radius: 7px; background: #fff; color: #222; -webkit-appearance: none; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
-#ext .xgo, #xbarfix .xgo { display: inline-block; margin: 2px 0 6px 0; padding: 9px 14px; border-radius: 8px; color: #fff; font-family: Helvetica, Arial, sans-serif; font-size: 14px; cursor: pointer; }
-#ext .xmargin { color: #887; font-family: Helvetica, Arial, sans-serif; font-size: 13px; margin: 6px 0 8px 0; }
+#ext .xbar input, #ext .xbar select, #xbarfix .xbar input, #xbarfix .xbar select { display: block; width: 100%; margin: 0 0 6px 0; padding: 6px 8px; font-size: 11px; line-height: 1.2; border: 1px solid #cbbd98; border-radius: 5px; background: #fff; color: #222; -webkit-appearance: none; outline: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
+#ext .xgorow, #xbarfix .xgorow { display: -webkit-box; display: -webkit-flex; display: flex; margin: 0 0 6px 0; }
+#ext .xgo, #xbarfix .xgo { display: block; -webkit-box-flex: 1; -webkit-flex: 1 1 0; flex: 1 1 0; text-align: center; margin: 0 3px 0 0; padding: 6px 3px; border-radius: 5px; color: #fff; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 1.2; cursor: pointer; }
+#ext .xgo:last-child, #xbarfix .xgo:last-child { margin-right: 0; }
+#ext .xmargin { color: #887; font-family: Helvetica, Arial, sans-serif; font-size: 0.8em; margin: 6px 0 8px 0; }
 #ext .xbar, #xbarfix .xbar { margin-bottom: 10px; }
 #xbarfix { position: fixed; top: 46px; left: 0; right: 0; z-index: 89; padding: 6px 10px 0 10px; background: #efe8d6; border-bottom: 1px solid #d8c9a8; -webkit-box-sizing: border-box; box-sizing: border-box; }
 #xbarfix .xbar { margin: 0; }
@@ -513,17 +515,17 @@ body.dark #xbarfix { background: #221d12; border-bottom-color: #3a3023; }
 #ext .xs, #ext .xcard { background: #fbf9f3; border: 1px solid #e2dac8; border-radius: 10px; padding: 12px 14px; margin: 10px 0; }
 #ext .xs .xs { background: transparent; border: 0; border-top: 1px solid #e2dac8; border-radius: 0; padding: 8px 0 0 0; margin: 8px 0 0 0; }
 #ext .xh { font-weight: bold; margin: 0 0 6px 0; line-height: 1.3; }
-#ext .xh2 { font-size: 1.15em; } #ext .xh3 { font-size: 1.05em; } #ext .xh4, #ext .xh5, #ext .xh6 { font-size: 1em; }
+#ext .xh2 { font-size: 1.1em; } #ext .xh3 { font-size: 1.02em; } #ext .xh4, #ext .xh5, #ext .xh6 { font-size: 1em; }
 #ext .xp { margin: 7px 0; }
 #ext .xr { font-weight: bold; }
 #ext .xn { font-style: italic; color: #776; }
 #ext .xe { border-left: 3px solid #d8c9a8; padding-left: 9px; }
-#ext .xpill { display: inline-block; border: 1px solid #6b4423; border-radius: 999px; padding: 1px 9px; margin: 2px 2px 2px 0; font-family: Helvetica, Arial, sans-serif; font-size: 12px; }
+#ext .xpill { display: inline-block; border: 1px solid #6b4423; border-radius: 999px; padding: 1px 9px; margin: 2px 2px 2px 0; font-family: Helvetica, Arial, sans-serif; font-size: 0.75em; }
 #ext .xlk { text-decoration: underline; cursor: pointer; font-weight: bold; }
-#ext .xpill.xlk { text-decoration: none; padding: 5px 12px; margin: 3px 4px 3px 0; font-size: 14px; }
+#ext .xpill.xlk { text-decoration: none; padding: 5px 12px; margin: 3px 4px 3px 0; font-size: 0.85em; }
 #ext .xv { padding: 9px 0; border-top: 1px solid #e2dac8; }
 #ext .xv:first-child { border-top: 0; }
-#ext .xref { font-weight: bold; font-family: Helvetica, Arial, sans-serif; font-size: 13px; }
+#ext .xref { font-weight: bold; font-family: Helvetica, Arial, sans-serif; font-size: 0.8em; }
 #ext .xempty { padding: 30px; text-align: center; color: #887; }
 body.dark #ext .xb { background: #222; border-color: #3a3023; color: #d8c9a8; }
 body.dark #ext .xbar input, body.dark #ext .xbar select, body.dark #xbarfix .xbar input, body.dark #xbarfix .xbar select { background: #2a2a2a; border-color: #444; color: #eee; }
@@ -671,7 +673,7 @@ var HIST = [];
 var DARK = false;
 var THEME = 'brown';
 var FONT = 'georgia';
-var APPVERSION = '1.0.147';
+var APPVERSION = '1.0.151';
 var VIEWMODE = 'list';
 var FIHVIEWMODE = 'list';  // affichage de la liste Fihirana : 'list' ou 'grid'
 var RESUME = false;
@@ -1178,6 +1180,7 @@ try{ var el=$(XINFO[k].id); XD[k]=JSON.parse(el.textContent||el.innerText); }cat
 return XD[k];
 }
 function xesc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function xnony(s){ s=xlab(s); if(XMOD==='fo'){ s=s.replace(/^Ny\s+/i,''); s=s.charAt(0).toUpperCase()+s.slice(1); } return s; }
 function xlab(s){
 s=String(s==null?'':s).replace(/^\s+|\s+$/g,'');
 var w=s.split(' '), i, t, out=[], prev='';
@@ -1214,7 +1217,7 @@ var h='', i, k, lv;
 if(n instanceof Array){ for(i=0;i<n.length;i++){ h+=xrender(n[i],d); } return h; }
 if(n && typeof n==='object'){
 lv=Math.min(d+2,6);
-for(k in n){ if(n.hasOwnProperty(k)){ h+='<div class="xs"><div class="xh xh'+lv+'">'+xlab(k)+'</div>'+xrender(n[k],d+1)+'</div>'; } }
+for(k in n){ if(n.hasOwnProperty(k)){ h+='<div class="xs"><div class="xh xh'+lv+'">'+xnony(k)+'</div>'+xrender(n[k],d+1)+'</div>'; } }
 return h;
 }
 return xpara(n);
@@ -1265,13 +1268,13 @@ return (a instanceof Array) ? a : [];
 }
 function xfillSub(D){
 var s=xsubs(D), h='', i;
-for(i=0;i<s.length;i++){ h+='<option value="'+i+'">'+xesc(xlab(xfirstKey(s[i])))+'</option>'; }
+for(i=0;i<s.length;i++){ h+='<option value="'+i+'">'+xesc(xnony(xfirstKey(s[i])))+'</option>'; }
 $('xsub').innerHTML=h; $('xsub').value=String(XSUB);
 }
 function xsimple(){
 var D=xget(XMOD), h='', i;
 h+='<div class="xbar"><div class="fih-tabs xone">';
-for(i=0;i<D.length;i++){ h+='<span class="fih-tab'+(i===XSEL?' on':'')+'" data-x="tab:'+i+'">'+xesc(xlab(xfirstKey(D[i])))+'</span>'; }
+for(i=0;i<D.length;i++){ h+='<span class="fih-tab'+(i===XSEL?' on':'')+'" data-x="tab:'+i+'">'+xesc(xnony(xfirstKey(D[i])))+'</span>'; }
 h+='</div>'+(XMOD==='fo' ? '<select id="xsub"></select>' : '')+'</div><div id="xres"></div>';
 $('ext').innerHTML=h; xfix();
 if(XMOD==='fo'){ xfillSub(D); $('xsub').onchange=function(){ XSUB=parseInt($('xsub').value,10); xdrawSimple(); setScrollY(0); }; }
@@ -1405,7 +1408,7 @@ function xand(){
 var h='', i;
 h+='<div class="xbar"><div class="fih-tabs xone">';
 for(i=0;i<XLABELS.length;i++){ h+='<span class="fih-tab'+(XLABELS[i][0]===XCAT?' on':'')+'" data-x="cat:'+XLABELS[i][0]+'">'+XLABELS[i][1]+'</span>'; }
-h+='</div><span class="xgo" data-x="rand">Verset aléatoire</span> <span class="xgo" data-x="all">Tous les versets</span></div><div id="xres"></div>';
+h+='</div><div class="xgorow"><span class="xgo" data-x="rand">Verset aléatoire</span><span class="xgo" data-x="all">Tous les versets</span></div></div><div id="xres"></div>';
 $('ext').innerHTML=h; xfix();
 xrebuild(); xdrawAnd();
 }
