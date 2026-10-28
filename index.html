@@ -9,8 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Ny Baiboly">
-<title>Ny Baiboly</title>
+<meta name="apple-mobile-web-app-title" content="Baiboly">
+<title>Baiboly</title>
 <style>
 * { -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none !important; -webkit-user-select: none !important; user-select: none !important; }
 html, body {
@@ -612,7 +612,7 @@ body.ff-lucidacon { font-family: 'Lucida Console','Courier New',monospace; }
   <span class="btn back hidden" id="backBtn" data-back="1" title="Miverina">‹</span>
   <span class="btn clsmt hidden" id="clsBtn">▤</span>
   <span class="btn srch" id="menuBtn">☰</span>
-  <div class="ttl" id="title">Ny Baiboly</div>
+  <div class="ttl" id="title">Baiboly</div>
 </div>
 <div id="btabsbar" class="btabs hidden"></div>
 <div id="fihbar" class="hidden"></div>
@@ -720,7 +720,7 @@ var HIST = [];
 var DARK = false;
 var THEME = 'brown';
 var FONT = 'georgia';
-var APPVERSION = '1.0.206';
+var APPVERSION = '1.0.208';
 var VIEWMODE = 'list';
 var FIHVIEWMODE = 'list';  // affichage de la liste Fihirana : 'list' ou 'grid'
 var RESUME = false;
@@ -947,7 +947,7 @@ h+='<div class="mmitem">\ud83d\udd20 Haben-tsoratra <span class="fsc"><span clas
 h+='<div class="mmitem last" data-mi="font">\ud83d\udd24 Endri-tsoratra <span class="st">'+fontName(FONT)+' \u203a</span></div>';
 } else {
 if(CURVIEW==='fihirana'){
-h+='<div class="mmitem" data-mi="goto-bible">\ud83d\udcd6 Ny Baiboly</div>';
+h+='<div class="mmitem" data-mi="goto-bible">\ud83d\udcd6 Baiboly</div>';
 h+='<div class="mmitem" data-mi="fihfavs">\ud83d\udd16 Mari-pejy <span class="st">'+FIHFAV.length+'</span></div>';
 h+='<div class="mmitem" data-mi="fihsearch">\ud83d\udd0d Karohy ao @ Fihirana</div>';
 h+='<div class="mmitem" data-mi="fihhist">\ud83d\udd50 Efa Voavaky</div>';
@@ -1062,7 +1062,7 @@ html+='<div class="item" data-i="'+i+'"><span class="cnt">'+'(toko '+CC[i]+')</s
 }
 if(grid){ html+='</div>'; }
 $('books').innerHTML=html;
-setTitle('Ny Baiboly');
+setTitle('Baiboly');
 forceRepaintWrap();
 }
 function setupResume(){
@@ -1187,7 +1187,7 @@ BACK=b;
 }
 function goBack(){
 var b=BACK;
-if(!b){ renderBooks(); setTitle('Ny Baiboly'); show('books'); return; }
+if(!b){ renderBooks(); setTitle('Baiboly'); show('books'); return; }
 if(b.view==='fihirana'){
 if(b.fihv==='song' && typeof b.fihi==='number' && b.fihi>=0 && FIHDATA && b.fihi<FIHDATA.length){
 show('fihirana'); renderFihiranaSong(b.fihi);
@@ -1215,7 +1215,7 @@ BACK=XBACK; show('ext'); setTitle(XINFO[XMOD].title); xview();
 if(b.y>0){ setTimeout(function(){ setScrollY(b.y); }, 40); }
 return;
 }
-if(!$(b.view) || b.view==='about' || b.view==='ext'){ renderBooks(); setTitle('Ny Baiboly'); show('books'); return; }
+if(!$(b.view) || b.view==='about' || b.view==='ext'){ renderBooks(); setTitle('Baiboly'); show('books'); return; }
 show(b.view);
 if(b.t){ var tt=$('title'); if(tt){ tt.innerHTML=b.t; } }
 if(b.y>0){ setTimeout(function(){ setScrollY(b.y); }, 30); }
@@ -1684,7 +1684,7 @@ tb=LAST.b; tc=LAST.c; ty=(LAST.v==='reader' ? (LAST.y||0) : 0);
 } else if(HIST.length>0){
 tb=HIST[0].b; tc=HIST[0].c; ty=0;
 }
-setTitle('Ny Baiboly'); show('load');
+setTitle('Baiboly'); show('load');
 ensureData(function(){
 if(!BIBLE){ return; }
 if(!BIBLE.books[tb] || !BIBLE.books[tb].c[tc]){ tb=0; tc=0; ty=0; }
@@ -1694,7 +1694,7 @@ if(ty>0){ setTimeout(function(){ setScrollY(ty); }, 40); }
 }
 function openStartFihirana(){
 setTitle('Fihirana'); show('load');
-if(!parseFih()){ renderBooks(); setTitle('Ny Baiboly'); show('books'); return; }
+if(!parseFih()){ renderBooks(); setTitle('Baiboly'); show('books'); return; }
 var fv=LAST.fv, fi=LAST.fi, fy=(LAST.y||0);
 if(LAST.ft){ FIHTAB=LAST.ft; }
 if(fv==='favs'){
@@ -2125,7 +2125,7 @@ setTitle('Tsara ho fantatra');
 function bookInfoClose(){
 var el=$('binfo'); if(el){ el.className='hidden'; el.innerHTML=''; }
 var bb=$('backBtn'); if(bb){ bb.className='btn back hidden'; }
-setTitle('Ny Baiboly');
+setTitle('Baiboly');
 syncClsBtn();
 }
 function bindBookLongPress(){
@@ -2215,7 +2215,7 @@ goBack(); return;
 if(t.getAttribute('data-nav')!==null && t.getAttribute('data-nav')!==undefined){
 var nv=t.getAttribute('data-nav'); closeMainMenu();
 if(nv==='fihirana'){ openFihirana(); }
-else { renderBooks(); setTitle('Ny Baiboly'); show('books'); }
+else { renderBooks(); setTitle('Baiboly'); show('books'); }
 return;
 }
 if(t.getAttribute('data-mi')!==null && t.getAttribute('data-mi')!==undefined){
@@ -2234,9 +2234,9 @@ if(mi && mi.indexOf('ft:')===0){ setFont(mi.slice(3)); buildMainMenu(); return; 
 if(mi==='mmback'){ MMPANEL='main'; buildMainMenu(); return; }
 if(mi.indexOf('x:')===0){ closeMainMenu(); extOpen(mi.slice(2)); return; }
 closeMainMenu();
-if(mi==='books'){ renderBooks(); setTitle('Ny Baiboly'); show('books'); }
+if(mi==='books'){ renderBooks(); setTitle('Baiboly'); show('books'); }
 else if(mi==='goto-fihirana'){ openFihirana(); }
-else if(mi==='goto-bible'){ renderBooks(); setTitle('Ny Baiboly'); show('books'); }
+else if(mi==='goto-bible'){ renderBooks(); setTitle('Baiboly'); show('books'); }
 else if(mi==='fihfavs'){ captureBack(); renderFihiranaFavs(); }
 else if(mi==='fihsearch'){ captureBack(); renderFihiranaSearch(''); }
 else if(mi==='fihhist'){ captureBack(); renderFihiranaHist(); }
@@ -2459,7 +2459,7 @@ var now=(new Date()).getTime();
 if(now-_ttlTapT < 320){
 if(_ttlTimer){ clearTimeout(_ttlTimer); _ttlTimer=null; }
 _ttlTapT=0;
-if(CURVIEW==='fihirana'){ renderBooks(); setTitle('Ny Baiboly'); show('books'); }
+if(CURVIEW==='fihirana'){ renderBooks(); setTitle('Baiboly'); show('books'); }
 else { openFihirana(); }
 return;
 }
@@ -2470,7 +2470,7 @@ _ttlTimer=null;
 if(CURVIEW==='fihirana'){
 if(FIHVIEW!=='list'){ renderFihiranaList(); setTitle('Fihirana'); }
 } else {
-if($('books').className!==''){ renderBooks(); setTitle('Ny Baiboly'); show('books'); }
+if($('books').className!==''){ renderBooks(); setTitle('Baiboly'); show('books'); }
 }
 }, 320);
 };
